@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Alatsi|Bebas+Neue&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  
+  height: 100vh;
+  background:linear-gradient(#C5002B, #ff7400);
+}
+.you-won{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+}
+#game{
+  height: 100vh;
+}
+.game-class{
+  display: none;
+  background: black;
+}
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 100px;
+  
+  
+}
+.remove{
+  display: none;
+}
+#btn{
+  position: absolute;
+  left: 43%;
+  top:50%;
+  /*height: 40px;
+  width: 100px;
+  background-color:blue;
+  border: 2px solid red;
+  color: white;
+  font-weight: bold;
+  cursor: crosshair;*/
+  box-shadow:inset -50px -27px 50px -1px #003df2;
+	background:linear-gradient(to bottom, #1f00cc 5%, #3e2cc7 100%);
+	background-color:#1f00cc;
+	border-radius:18px;
+	border:2px solid #cfd8e6;
+	display:inline-block;
+	cursor:pointer;
+	color:#faf0fa;
+	font-family:Arial;
+	font-size:19px;
+	font-weight:bold;
+	padding:8px 37px;
+	text-decoration:none;
+	text-shadow:-9px 0px 3px #383885;
+}
+
+
+.sb{
+display: flex;
+justify-content: center;
+font-size: 30px;
+font-weight: bold;
+margin-top:0px;
+color: white;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Alatsi', sans-serif;
+}
+#memGame{
+display: flex;
+justify-content: center;
+font-size: 30px;
+font-weight: bold;
+margin-top:50px;
+color: white;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Alatsi', sans-serif;
+}
+
+
+#score{
+  border: none;
+}
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #ffb700 ;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
